@@ -2,8 +2,8 @@
 
 namespace JustSteveKing\Laravel\Envoyer\SDK\Tests;
 
-use JustSteveKing\Laravel\Envoyer\SDK\Envoyer;
 use PHPUnit\Framework\TestCase;
+use JustSteveKing\Laravel\Envoyer\SDK\Envoyer;
 
 class EnvoyerTest extends TestCase
 {

@@ -1,1 +1,0 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":188:{a:2:{s:7:"defects";a:1:{s:7:"Warning";i:6;}s:5:"times";a:2:{s:7:"Warning";d:0.001;s:88:"JustSteveKing\Laravel\Envoyer\SDK\Tests\EnvoyerTest::it_will_create_the_client_correctly";d:0.006;}}}

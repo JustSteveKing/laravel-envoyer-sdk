@@ -28,7 +28,7 @@
     "symfony/http-client": "^5.1"
   },
   "require-dev": {
-    "mockery/mockery": "^1.4",
+    "php-http/mock-client": "^1.4",
     "phpunit/phpunit": "^9.4",
     "symfony/var-dumper": "^5.1"
   },

@@ -3,7 +3,14 @@
 namespace JustSteveKing\Laravel\Envoyer\SDK;
 
 use DI\Container;
+use JustSteveKing\Laravel\Envoyer\SDK\Resources\Action;
+use JustSteveKing\Laravel\Envoyer\SDK\Resources\Collaborator;
+use JustSteveKing\Laravel\Envoyer\SDK\Resources\Deployment;
+use JustSteveKing\Laravel\Envoyer\SDK\Resources\Environment;
+use JustSteveKing\Laravel\Envoyer\SDK\Resources\Hook;
+use JustSteveKing\Laravel\Envoyer\SDK\Resources\Notification;
 use JustSteveKing\Laravel\Envoyer\SDK\Resources\Project;
+use JustSteveKing\Laravel\Envoyer\SDK\Resources\Server;
 use JustSteveKing\PhpSdk\Client;
 use JustSteveKing\UriBuilder\Uri;
 use JustSteveKing\HttpAuth\Strategies\BasicStrategy;
@@ -46,7 +53,14 @@ class Envoyer extends Client
         $client = new self($apiKey, $uri);
 
         // Add Resources
+        $client->addResource('hooks', new Hook());
+        $client->addResource('actions', new Action());
+        $client->addResource('servers', new Server());
         $client->addResource('projects', new Project());
+        $client->addResource('deployments', new Deployment());
+        $client->addResource('environments', new Environment());
+        $client->addResource('collaborators', new Collaborator());
+        $client->addResource('notifications', new Notification());
 
         return $client;
     }
