@@ -14,7 +14,7 @@ class Collaborator extends EnvoyerResource
                 $data,
                 $this->strategy()->getHeader($this->authHeader)
             );
-        // @codeCoverageIgnoreStart
+            // @codeCoverageIgnoreStart
         } catch (\Exception $e) {
             throw $e;
         }

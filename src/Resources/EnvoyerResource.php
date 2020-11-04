@@ -73,7 +73,7 @@ class EnvoyerResource extends AbstractResource
                 $data,
                 $this->strategy()->getHeader($this->authHeader)
             );
-        // @codeCoverageIgnoreStart
+            // @codeCoverageIgnoreStart
         } catch (\Exception $e) {
             throw $e;
         }
@@ -95,7 +95,7 @@ class EnvoyerResource extends AbstractResource
                 $this->uri()->toString(),
                 $this->strategy()->getHeader($this->authHeader)
             );
-        // @codeCoverageIgnoreStart
+            // @codeCoverageIgnoreStart
         } catch (\Exception $e) {
             throw $e;
         }

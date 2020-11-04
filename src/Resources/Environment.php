@@ -37,9 +37,9 @@ class Environment extends EnvoyerResource
     public function put(...$data):? object
     {
         $data = array_merge([
-            'key' => $this->key
-        ],[
-            'contents' => implode('\n', $data)
+            'key' => $this->key,
+        ], [
+            'contents' => implode('\n', $data),
         ]);
 
         if (! empty($this->servers)) {

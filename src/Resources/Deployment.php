@@ -14,7 +14,7 @@ class Deployment extends EnvoyerResource
                 [],
                 $this->strategy()->getHeader($this->authHeader)
             );
-        // @codeCoverageIgnoreStart
+            // @codeCoverageIgnoreStart
         } catch (\Exception $e) {
             throw $e;
         }
@@ -35,7 +35,7 @@ class Deployment extends EnvoyerResource
                 [],
                 $this->strategy()->getHeader($this->authHeader)
             );
-        // @codeCoverageIgnoreStart
+            // @codeCoverageIgnoreStart
         } catch (\Exception $e) {
             throw $e;
         }
