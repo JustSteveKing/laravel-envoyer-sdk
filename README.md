@@ -1,5 +1,11 @@
 # Laravel Envoyer SDK
 
+<p align="center">
+
+![](./laravel-envoyer-sdk.png)
+
+</p>
+
 <!-- BADGES_START -->
 [![Latest Version][badge-release]][packagist]
 [![PHP Version][badge-php]][php]
