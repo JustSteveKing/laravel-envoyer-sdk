@@ -3,6 +3,8 @@
 namespace JustSteveKing\Laravel\Envoyer\SDK;
 
 use DI\Container;
+use JustSteveKing\HttpAuth\Strategies\BasicStrategy;
+use JustSteveKing\HttpSlim\HttpClient;
 use JustSteveKing\Laravel\Envoyer\SDK\Resources\Action;
 use JustSteveKing\Laravel\Envoyer\SDK\Resources\Collaborator;
 use JustSteveKing\Laravel\Envoyer\SDK\Resources\Deployment;
@@ -12,10 +14,8 @@ use JustSteveKing\Laravel\Envoyer\SDK\Resources\Notification;
 use JustSteveKing\Laravel\Envoyer\SDK\Resources\Project;
 use JustSteveKing\Laravel\Envoyer\SDK\Resources\Server;
 use JustSteveKing\PhpSdk\Client;
-use JustSteveKing\UriBuilder\Uri;
-use JustSteveKing\HttpAuth\Strategies\BasicStrategy;
-use JustSteveKing\HttpSlim\HttpClient;
 use JustSteveKing\PhpSdk\ClientBuilder;
+use JustSteveKing\UriBuilder\Uri;
 use Symfony\Component\HttpClient\Psr18Client;
 
 class Envoyer extends Client
