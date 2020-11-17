@@ -6,12 +6,12 @@ class Deployment extends EnvoyerResource
 {
     protected string $path = 'deployments';
 
-    public function deploy():? object
+    public function deploy(array $payload = []):? object
     {
         try {
             $response = $this->http()->post(
                 $this->uri()->toString(),
-                [],
+                $payload,
                 $this->strategy()->getHeader($this->authHeader)
             );
             // @codeCoverageIgnoreStart
