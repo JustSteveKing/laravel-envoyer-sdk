@@ -419,7 +419,7 @@ $envoyer->deployments->on('id-of-project')->deploy([
 // Deployment from tag
 $envoyer->deployments->on('id-of-project')->deploy([
     'from' => 'tag',
-    'branch' => 'v2.0.0'
+    'tag' => 'v2.0.0'
 ]);
 ```
 
