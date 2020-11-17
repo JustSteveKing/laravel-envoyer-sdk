@@ -407,7 +407,20 @@ $envoyer = Envoyer::illuminate(
     'https://envoyer.io/' // this is optional as is the default
 );
 
+// Default Deployment
 $envoyer->deployments->on('id-of-project')->deploy();
+
+// Deployment from branch
+$envoyer->deployments->on('id-of-project')->deploy([
+    'from' => 'branch',
+    'branch' => 'develop'
+]);
+
+// Deployment from tag
+$envoyer->deployments->on('id-of-project')->deploy([
+    'from' => 'tag',
+    'branch' => 'v2.0.0'
+]);
 ```
 
 ### Getting a single Deployment
