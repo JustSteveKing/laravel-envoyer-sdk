@@ -137,6 +137,8 @@ $envoyer->projects->delete('id-of-project');
 
 ### Update a Project's Source
 
+ Note that all the options are required, you cannot just parse through push_to_deploy as a single option
+
 ```php
 use JustSteveKing\Laravel\Envoyer\SDK\Envoyer;
 
