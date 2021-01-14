@@ -135,6 +135,25 @@ $envoyer = Envoyer::illuminate(
 $envoyer->projects->delete('id-of-project');
 ```
 
+### Update a Project's Source
+
+ Note that all the options are required, you cannot just parse through push_to_deploy as a single option
+
+```php
+use JustSteveKing\Laravel\Envoyer\SDK\Envoyer;
+
+$envoyer = Envoyer::illuminate(
+    API_TOKEN_HERE,
+    'https://envoyer.io/' // this is optional as is the default
+);
+
+$envoyer->projects->updateSource('id-of-project', [
+    'provider' => 'github',
+    'repository' => 'laravel/laravel',
+    'branch' => '8.x',
+    'push_to_deploy' => true,
+]);
+```
 
 ## Managing Servers
 
