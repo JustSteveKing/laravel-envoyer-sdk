@@ -10,6 +10,9 @@ class Action extends AbstractResource
 
     public function all():? object
     {
-        return json_decode($this->get()->getBody()->getContents());
+        return \json_decode(
+            $this->get()->getBody()->getContents(),
+            false
+        );
     }
 }

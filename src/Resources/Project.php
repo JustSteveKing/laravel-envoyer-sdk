@@ -23,6 +23,9 @@ class Project extends EnvoyerResource
             throw $e;
         }
         // @codeCoverageIgnoreEnd;
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 }

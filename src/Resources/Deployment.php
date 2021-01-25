@@ -20,7 +20,10 @@ class Deployment extends EnvoyerResource
         }
         // @codeCoverageIgnoreEnd
 
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 
     public function cancel($identifier):? object
@@ -41,6 +44,9 @@ class Deployment extends EnvoyerResource
         }
         // @codeCoverageIgnoreEnd
 
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 }

@@ -20,6 +20,9 @@ class Collaborator extends EnvoyerResource
         }
         // @codeCoverageIgnoreEnd
 
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 }

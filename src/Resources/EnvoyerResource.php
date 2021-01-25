@@ -35,7 +35,10 @@ class EnvoyerResource extends AbstractResource
      */
     public function all():? object
     {
-        return json_decode($this->get()->getBody()->getContents());
+        return \json_decode(
+            $this->get()->getBody()->getContents(),
+            false
+        );
     }
 
     /**
@@ -61,7 +64,10 @@ class EnvoyerResource extends AbstractResource
      */
     public function first($identifier):? object
     {
-        return json_decode($this->find($identifier)->getBody()->getContents());
+        return \json_decode(
+            $this->find($identifier)->getBody()->getContents(),
+            false
+        );
     }
 
     public function modify($identifier, array $data):? object
@@ -82,7 +88,10 @@ class EnvoyerResource extends AbstractResource
         }
         // @codeCoverageIgnoreEnd;
 
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 
     public function remove($identifier = null):? object
@@ -104,6 +113,9 @@ class EnvoyerResource extends AbstractResource
         }
         // @codeCoverageIgnoreEnd
 
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 }

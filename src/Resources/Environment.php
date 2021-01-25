@@ -24,7 +24,10 @@ class Environment extends EnvoyerResource
             "{$this->uri()->path()}/servers"
         );
 
-        return json_decode($this->get()->getBody()->getContents());
+        return \json_decode(
+            $this->get()->getBody()->getContents(),
+            false
+        );
     }
 
     public function onServer(...$servers): self
@@ -52,7 +55,10 @@ class Environment extends EnvoyerResource
             $this->strategy()->getHeader($this->authHeader)
         );
 
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 
     public function reset($key):? object
@@ -70,6 +76,9 @@ class Environment extends EnvoyerResource
         }
         // @codeCoverageIgnoreEnd
 
-        return json_decode($response->getBody()->getContents());
+        return \json_decode(
+            $response->getBody()->getContents(),
+            false
+        );
     }
 }
