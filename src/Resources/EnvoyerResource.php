@@ -47,7 +47,10 @@ class EnvoyerResource extends AbstractResource
      */
     public function save(array $data):? object
     {
-        return json_decode($this->create($data)->getBody()->getContents());
+        return \json_decode(
+            $this->create($data)->getBody()->getContents(),
+            false
+        );
     }
 
     /**
